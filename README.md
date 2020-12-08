@@ -25,6 +25,7 @@ FastAPI
             │   ├── api
             │   │   ├── __init__.py
             │   │   └── ping.py
+            │   ├── db.py
             │   └── main.py
             ├── requirements.txt
             └── tests
@@ -60,4 +61,24 @@ FastAPI
     /notes/ 	    POST 	        CREATE 	        add a note
     /notes/:id/ 	PUT 	        UPDATE 	        update a note
     /notes/:id/ 	DELETE 	        DELETE 	        delete a note
+***************************
+Postgres 
+ 
+    DATABASE_URL=postgresql://postgres:postgres@db/fastapi_dev
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=fastapi_dev
+
+
+databases is an async SQL query builder that works on top of the SQLAlchemy Core expression language. It supports the following methods:
+
+    database.fetch_all(query)
+    database.fetch_one(query)
+    database.iterate(query)
+    database.execute(query)
+    database.execute_many(query)
+
+Review the Async SQL (Relational) Databases guide and the Starlette Database docs for more details on working with databases asynchronously.
+
+
 ***************************
