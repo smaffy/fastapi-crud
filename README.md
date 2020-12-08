@@ -30,4 +30,34 @@ FastAPI
             └── tests
                 ├── __init__.py
                 ├── conftest.py
-                └── test_ping.py
+                └── test_main.py
+
+* Docker
+
+
+    $ docker-compose up -d --build
+    $ docker-compose exec web pytest .
+
+
+
+*************************
+    http://http://0.0.0.0:8002/ping
+    {
+      "ping": "pong!"
+    }
+
+    http://http://0.0.0.0:8002/docs    
+    http://0.0.0.0:8002/redoc
+
+***********************
+    Routes
+
+    set up the basic CRUD routes, following RESTful best practices:
+    
+    Endpoint 	    HTTP Method 	CRUD Method 	Result
+    /notes/ 	    GET 	        READ 	        get all notes
+    /notes/:id/ 	GET 	        READ 	        get a single note
+    /notes/ 	    POST 	        CREATE 	        add a note
+    /notes/:id/ 	PUT 	        UPDATE 	        update a note
+    /notes/:id/ 	DELETE 	        DELETE 	        delete a note
+***************************
