@@ -33,6 +33,7 @@ FastAPI
             ├── tests
             │   ├── __init__.py
             │   ├── conftest.py
+            │   ├── test_notes.py
             │   └── test_main.py
             ├── requirements.txt
             └── Dockerfile
