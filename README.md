@@ -24,6 +24,7 @@ FastAPI
             │   ├── __init__.py
             │   ├── api
             │   │   ├── __init__.py
+            │   │   ├── models.py
             │   │   └── ping.py
             │   ├── db.py
             │   └── main.py
@@ -80,5 +81,15 @@ databases is an async SQL query builder that works on top of the SQLAlchemy Core
 
 Review the Async SQL (Relational) Databases guide and the Starlette Database docs for more details on working with databases asynchronously.
 
-
 ***************************
+Models
+
+    check db:
+    $ docker-compose exec db psql --username=postgres --dbname=fastapi_dev
+    # \l
+    # \dt
+    # \q
+
+Pydantic Model (like serializer in drf)
+https://pydantic-docs.helpmanual.io/
+*******************************************
