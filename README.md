@@ -9,7 +9,7 @@ FastAPI
     Pytest v5.3.2
     Databases v0.2.6
     
-
+*********************************
 
 * Project structure
 
@@ -21,18 +21,22 @@ FastAPI
         └── src
             ├── Dockerfile
             ├── app
-            │   ├── __init__.py
             │   ├── api
             │   │   ├── __init__.py
+            │   │   ├── crud.py
             │   │   ├── models.py
+            │   │   ├── notes.py
             │   │   └── ping.py
+            │   ├── __init__.py
             │   ├── db.py
             │   └── main.py
+            ├── tests
+            │   ├── __init__.py
+            │   ├── conftest.py
+            │   └── test_main.py
             ├── requirements.txt
-            └── tests
-                ├── __init__.py
-                ├── conftest.py
-                └── test_main.py
+            └── Dockerfile
+*********************************************
 
 * Docker
 
@@ -93,3 +97,8 @@ Models
 Pydantic Model (like serializer in drf)
 https://pydantic-docs.helpmanual.io/
 *******************************************
+POST Route
+
+    test in terminal:
+    $ http --json POST http://localhost:8002/notes/ title=foo description=bar
+    .... or curl
