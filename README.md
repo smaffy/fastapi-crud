@@ -19,7 +19,6 @@ Project structure
             ├── .gitignore
             ├── README.md
             └── src
-                ├── Dockerfile
                 ├── app
                 │   ├── api
                 │   │   ├── __init__.py
